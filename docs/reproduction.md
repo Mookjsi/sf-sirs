@@ -47,3 +47,7 @@ python3 scripts/verify_report.py --mechanisms artifacts/mechanisms-new --h1 arti
 The verifier writes `verification_results.csv`, `verification_summary.md`, and `manifest.json`; missing inputs are marked `BLOCKED`. It compares calculated metrics with the report at the stated display precision.
 
 These commands reproduce calculations from frozen fitted states, experiment designs, and stored Park posterior summaries. They do not perform full model refitting or Park MCMC. The fitted decomposition and controlled perturbations do not uniquely identify climatic, behavioral, reporting, or other historical causes of the observed shift.
+
+## Exploratory climate analysis
+
+With the four original CSV inputs under `data/climate/source/`, run `python3 scripts/reproduce_exploratory.py --input-dir data/climate/source --out artifacts/exploratory-climate-new`. Select one component using `--analysis NAME`. See the [module guide](../extensions/humidity/exploratory/README.md) and [figure provenance](exploratory-provenance.md). These descriptive plots do not reproduce Chapter 6 Bayesian model fitting; the remaining fitted-object gap is recorded in the provenance note.

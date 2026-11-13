@@ -50,3 +50,7 @@ Included inputs and their SHA-256 hashes are listed in [source-checksums.csv](do
 ## License and attribution
 
 The Park source retains its [MIT license](references/parksw3/LICENSE) and copyright notice. [Third-party notices](THIRD_PARTY_NOTICES.md) describe other attribution and reuse boundaries; no whole-project license is asserted there.
+
+## Exploratory climate analysis
+
+The independent [Python exploratory module](extensions/humidity/exploratory/README.md) examines prefecture-level RSV timing variance, outdoor temperature, and specific humidity. Its [figure provenance](docs/exploratory-provenance.md) is separate from the SF-SIRS mechanism experiments.
