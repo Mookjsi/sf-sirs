@@ -1,6 +1,7 @@
 /artifacts/
 /data/
 /outputs/
+/reproduction/
 /.r-env/
 __pycache__/
 *.pyc
