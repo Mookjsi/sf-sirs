@@ -1,0 +1,10 @@
+# Explicit CLI entry point. Paths are independent of the caller's working directory.
+args <- commandArgs(trailingOnly=TRUE)
+file_arg <- grep("^--file=",commandArgs(),value=TRUE)
+root <- normalizePath(file.path(dirname(sub("^--file=","",file_arg)),".."))
+if(length(args)>2L) stop("Usage: Rscript scripts/preprocess.R [PERTURBATION_ROOT [NEW_OUTPUT_DIR]]")
+input <- if(length(args)>=1L) args[1] else file.path(root,"../perturbation")
+output <- if(length(args)>=2L) args[2] else file.path(root,"data/processed/original-island-v1")
+source(file.path(root,"R/preprocess.R"))
+preprocess_japan_data(input,output)
+cat("Prepared 8 CSV files in ",normalizePath(output),"\n",sep="")

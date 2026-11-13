@@ -1,0 +1,17 @@
+phase24_config <- function() list(
+  version="phase24-1", seed=20261112L,
+  source_config="config/phase22.R",
+  weekly="artifacts/phase22-compare-001/weekly.csv",
+  phase23=c("artifacts/phase23-mechanism-003/result.rds",
+            "artifacts/phase23-sensitivity-001/result.rds",
+            "artifacts/phase23-matched-001/result.rds",
+            "artifacts/phase23-report-002/result.rds"),
+  seasons=2015:2017, padding_weeks=13L,
+  replay_tolerance=1e-7,
+  observed_gate=list(max_peak_change_error_weeks=2,
+                     max_cog_change_error_weeks=2,
+                     max_each_season_peak_error_weeks=3),
+  log_grid=seq(-log(1.2),log(1.2),length.out=9L),
+  refine_levels=1L, max_refined_per_path=12L,
+  identity=list(match_distance=12,max_log_height_change=log(2),
+    height_weight=2,context_weight=1,margin=.5))

@@ -1,0 +1,20 @@
+# Frozen before Phase 21 empirical execution. Log-q limits copy accepted_extension_config().
+phase21_config <- function() list(
+  version="phase21-1",reference="artifacts/phase7c-tangent-001/result.rds",
+  validation="artifacts/accepted-extension-validation-001",
+  baseline="artifacts/accepted-extension-fit-001",
+  panel="artifacts/phase17-full-panel-001",
+  q_log_bounds=log(c(.05,20)),week53_policy="repeat_week52",
+  week53_sensitivity="map_to_week1",future_external_multiplier=1,
+  spline_spacings=c(8L,16L),block_width=8L,
+  smoothing_grid=c(.1,1,10),
+  validation_blocks=list(20:31,55:66,95:106,145:156,185:196),
+  forecast_origins=c(157L,165L,172L),
+  selection=list(score_tie_per_week=.02,annual_relative_burden=.25,
+    cumulative_median_timing_weeks=6,large_false_peak_ratio=2),
+  optimizer=list(seed=20261110L,perturb_sd=.12,perturbed_starts=2L,
+    maxit=1200L,reltol=1e-8,outer_iterations=20L,barrier_mu=1e-4,
+    gradient_step=1e-4),
+  diagnostic_steps=c(1e-3,1e-4,1e-5),near_best_gap=2,
+  shape_cluster_max_logq_difference=.05,
+  bootstrap=list(replicates=100L,seed=20261111L,interval=c(.025,.975)))

@@ -1,0 +1,13 @@
+phase16_config <- function() list(version="16-1",
+  amplitudes=c(0,.3,.6),phases=c(1,14),mean_factors=c(.8,1,1.2),
+  u_values=c(-log(1.2),0,log(1.2)),v_values=c(-log(1.2),0,log(1.2)),
+  horizon_years=8L,report_years=3:6,scenario_cap=80L,
+  search_order="AMPLITUDE_PHASE_MEAN_AXIS_COORDINATE",
+  large_weeks=8,abrupt_log_width=.05,min_incidence=1e-6,
+  min_relative_prominence=.01,tie_abs=1e-8,tie_rel=1e-6,
+  threshold_sensitivity=c(.8,1,1.2),
+  refinement_depth=2L,refinement_min_width=.005,refinement_cap=12L,
+  neighborhood=list(amplitude_offsets=c(-.05,.05),phase_offsets=c(-1,1),
+    mean_factor_offsets=c(-.05,.05),cap=12L),
+  recurrence=list(periods=1:3,checkpoint_years=c(4L,6L,8L),
+    state_abs=1e-5,state_rel=1e-7,profile_abs=1e-5,profile_rel=1e-6))

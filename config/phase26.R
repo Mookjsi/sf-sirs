@@ -1,0 +1,16 @@
+phase26_config <- function() list(
+  version="phase26-1", seed=20261112L, replay_tolerance=1e-7,
+  source_config="config/phase22.R", phase24_config="config/phase24.R",
+  phase25="artifacts/phase25-audit-001/result.rds",
+  phase24="artifacts/phase24-report-002/result.rds",
+  phase24_weekly="artifacts/phase22-compare-001/weekly.csv",
+  historical_seasons=2012:2019, correction_bound=log(1.5),
+  shape_bound=log(1.25),
+  penalty_grid=data.frame(id=c("light","primary","strong"),
+    level=c(0.5,2,8),change=c(0.5,2,8)),
+  starts=3L, maxit=1200L, gradient_step=1e-4,
+  descent_steps=c(1e-3,1e-4,1e-5), descent_tolerance=1e-3,
+  boundary_jump_threshold=log(1.1), boundary_blend_weeks=2L,
+  peak_change_tolerance=2L, endpoint_peak_tolerance=2L,
+  cog_change_tolerance=1, other_year_mae_deterioration=0.05,
+  holdout_projection="zero")
