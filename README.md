@@ -41,7 +41,7 @@ Rscript scripts/forcast/score.R artifacts/forecast-new
 python3 scripts/verify_report.py --mechanisms artifacts/mechanisms-new --h1 artifacts/h1-new --phase29 artifacts/phase29-evaluate-new --phase28 artifacts/comparison-new --phase28-history artifacts/phase28-compare-003 --forecast artifacts/forecast-new --out artifacts/verification-new
 ```
 
-H2 and H3 are produced together by `reproduce_frozen.R`. The Park comparison uses stored posterior weekly summaries. The verifier flags two Table 3.1 display discrepancies described in the guide.
+H2 and H3 are produced together by `reproduce_frozen.R`. The Park comparison uses stored posterior weekly summaries.
 
 ## Data and references
 

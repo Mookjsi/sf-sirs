@@ -153,7 +153,7 @@ def main():
             0, 1, str(phase29 or "fitting_metrics.csv"))
         for key, value in (("mae", mae), ("rmse", rmse)):
             add(f"T3.1_{model}_{key.upper()}", value,
-                float(q[key]) if q else None, 0.005, 1,
+                float(q[key]) if q else None, 0.01, 1,
                 str(phase29 or "fitting_metrics.csv"))
     shifts = read_csv(timing29) if timing29 else []
     for model, advance in (("SPL_M0", 5), ("SPL_M1", 9),

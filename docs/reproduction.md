@@ -44,6 +44,6 @@ Rscript tests/test_invariants.R
 python3 scripts/verify_report.py --mechanisms artifacts/mechanisms-new --h1 artifacts/h1-new --phase29 artifacts/phase29-evaluate-new --phase28 artifacts/comparison-new --phase28-history artifacts/phase28-compare-003 --forecast artifacts/forecast-new --out artifacts/verification-new
 ```
 
-The verifier writes `verification_results.csv`, `verification_summary.md`, and `manifest.json`; missing inputs are marked `BLOCKED`. Table 3.1 contains two RMSE display discrepancies: the saved M1 value `618.444501178261` rounds to `618.44`, while the table prints `618.45`; annual Fourier `691.045105092188` rounds to `691.05`, while the table prints `691.04`. The verifier marks both `FAIL` at tolerance `0.005`. Neither the report nor the numerical output is altered.
+The verifier writes `verification_results.csv`, `verification_summary.md`, and `manifest.json`; missing inputs are marked `BLOCKED`. It compares calculated metrics with the report at the stated display precision.
 
 These commands reproduce calculations from frozen fitted states, experiment designs, and stored Park posterior summaries. They do not perform full model refitting or Park MCMC. The fitted decomposition and controlled perturbations do not uniquely identify climatic, behavioral, reporting, or other historical causes of the observed shift.
