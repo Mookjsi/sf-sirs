@@ -1,0 +1,4 @@
+"model","summary","observed_peak_movement","fitted_peak_movement","peak_movement_error","observed_cog_movement","fitted_cog_movement","cog_movement_error","endpoint_peak_pass","peak_movement_pass","cog_movement_pass"
+"M2","M2",-13,-11,2,-4.4625638525048,-3.2683727010017,1.19419115150309,FALSE,TRUE,FALSE
+"PARK","PARK_mean",-13,-11,2,-4.4625638525048,-1.38796563729329,3.0745982152115,TRUE,TRUE,FALSE
+"PARK","PARK_median",-13,-11,2,-4.4625638525048,-1.38867340912888,3.07389044337591,TRUE,TRUE,FALSE

@@ -1,0 +1,3 @@
+"model","free_coordinates","fixed_parameter_count","seasonal_coordinates","time_varying_correction_coordinates","initial_state_coordinates","observation_coordinates","other_epidemiological_coordinates","estimated_prior_or_penalty_hyperparameters","note"
+"M2",64,4,8,52,2,2,0,0,"M2 free coordinates counted from saved endpoint; anchored level excluded; fixed mu, gamma, omega, delta"
+"PARK",269,2,52,209,2,2,2,2,"PARK includes 52 beta, post-intervention npi, and S0, I0, rho, sigma, phi, tau, omega, sigma_npi; fixed mu and gamma"

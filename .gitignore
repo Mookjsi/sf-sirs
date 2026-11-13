@@ -1,3 +1,4 @@
+# Tracked reference inputs are committed explicitly; new run outputs stay ignored.
 /artifacts/
 /data/
 /outputs/

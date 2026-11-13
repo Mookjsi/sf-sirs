@@ -1,18 +1,15 @@
-# Reviewer inputs and redistribution boundary
+# Included reviewer inputs
 
-The public code can be cloned independently. The exact numerical inputs are supplied separately by a reviewer with permission to use them. `docs/source-checksums.csv` lists SHA-256 hashes; the direct scripts reject an unexpected M2 evaluation or H1 design. No runtime path points to the source author's archive.
+The project owner confirmed redistribution permission for the selected report inputs and evidence in this release. Exact source files are tracked under `artifacts/` and `data/`; their SHA-256 hashes are in `docs/source-checksums.csv`. The reference report is `final_2.pdf`, SHA-256 `50d65804d4e7fdfa2b10783e5536525a2dc431d1904ac63fca3de326af957a7e`.
 
-| File in reviewer `INPUT/` | Source provenance | Status |
-|---|---|---|
-| `m2-evaluation.rds` | `artifacts/phase26-m2-evaluate-001/result.rds`; selected M2 573-week trajectory and restart states; SHA-256 `45c5e155d900da17637dbb26a8d562af2315c2d863a78df05679b10728c65e18` | Redistribution permission for fitted state and embedded observations not established; keep outside public Git |
-| `peak_path_grid.csv` | `artifacts/m2-full-h1-001/peak_path_grid.csv`; H1 declared grid; SHA-256 `7a8913d47d1a98be409981709d23e5530f7130f83079707280c37be8e566c6dd` | Derived result redistribution unconfirmed; keep outside public Git |
-| `h1_event_summary.csv` | `artifacts/m2-full-h1-001/h1_event_summary.csv`; only parent interval bounds are used by the new H1 simulation; SHA-256 `5fc580cce9e481694eb1f9d2fe30dc30081df2dd004b687e824e48ef1f68880e` | Derived result redistribution unconfirmed; keep outside public Git |
-| `park-weekly-fit.csv` | `artifacts/phase28-park-fit-003/weekly_fit.csv`; pointwise posterior mean and median; SHA-256 `b4f864089114c2febeac795dec56fd69fc516b3013dbc8ba9c46a5408ee74d79` | Posterior-derived summary and embedded observations require rights review |
-| `phase28-history/runtime_metrics.csv`, `phase28-history/parameter_inventory.csv` | `phase28-compare-003` original execution records, hashes in `source-checksums.csv` | Historical evidence only; do not replace original wall time with a new benchmark |
-| Phase 29 fit/checkpoint files | Exact 12 paths in `config/phase29.R` and hashes in `source-checksums.csv` | Fit states and source observations are not cleared for publication |
-| Phase 28 panel, M2 fit, Park result | Exact paths in `config/phase28.R`; Park `phase28-park-fit-003/weekly_fit.csv` contains pointwise mean and median | Posterior summaries and panel are not cleared for publication; full posterior object is approximately 452 MB and unnecessary for the fast compare path |
-| Chapter 5 forecast inputs | Final 2024 NESID annual Table 8-1; JIHS 2025-W52 and 2026-W44 CSV releases; M2 fit; original 66-week forecast, population and historical cases | Source release is publicly viewable, but redistribution authorization for these snapshots and derived panels was not established; supply exact hashed files separately |
+| Purpose | Included files |
+|---|---|
+| Frozen M2 and Phase 29 | The 12 exact inputs in `config/phase29.R`, including selected `phase26-m2-fit-001/result.rds`, its evaluation, M0/M1 checkpoints, and raw A/AS Fourier fits |
+| H1 | `artifacts/m2-full-h1-001/peak_path_grid.csv`, `h1_event_summary.csv`, and `classification_audit.csv` |
+| H2 and H3 reference | `artifacts/m2-full-h2-001/` seasonal summary and step audit; corrected `artifacts/m2-full-h3-002/` local summary and finite effects |
+| Park comparison | `artifacts/phase28-park-fit-003/weekly_fit.csv` with pointwise posterior mean and median; `artifacts/phase28-compare-003/` metrics, parameter inventory, runtime records, and figures |
+| Chapter 5 | Exact 2024 NESID and 2025/2026 JIHS releases under `data/forcast/`; population and cases under `data/processed/original-island-v1-traceable/`; frozen forecast reference and fit hash under `artifacts/forcast-2024-verified/` |
 
-The selected Park implementation is pinned to `parksw3/perturbation` commit `475c7dcdadc12987033d332b101f025625074301`. Its copied code retains the MIT license in `references/parksw3/LICENSE`; this license does not itself establish rights to unrelated competition data, posterior draws, or surveillance releases. For external input rights, obtain the applicable source terms or authorization before making a public companion package.
+The full Park posterior objects (roughly 452 MB) and exploratory refitting chain are not needed for the fast verification path and are not included. Park code copied from `parksw3/perturbation` remains pinned to commit `475c7dcdadc12987033d332b101f025625074301` and retains its MIT license and attribution in `references/parksw3/LICENSE`.
 
-Keep `INPUT/` outside the repository or in ignored `data/`. Generated `artifacts/` and `reproduction/` directories are ignored. A private reviewer package can contain the exact files above after rights and access are confirmed; include their SHA-256 values and the package recipient scope.
+Saved RDS metadata records historical paths and earlier phase hashes for provenance. The direct H1–H3 and Park commands use repository-relative input paths and do not dereference those historical paths. New output directories remain ignored by Git; create fresh names rather than overwriting tracked reference artifacts.

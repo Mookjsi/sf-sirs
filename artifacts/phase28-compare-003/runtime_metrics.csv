@@ -1,0 +1,3 @@
+"stage","model","cpu_model","allocated_cores","actual_thread_setting","preparation_seconds","compilation_seconds","fit_seconds","postprocess_seconds","total_seconds","process_tree_cpu_seconds","peak_memory_bytes"
+"fit","M2","model name	: INTEL(R) XEON(R) GOLD 6530",1,"single R optimizer process",0.92119574546814,0,607.278552532196,0.0307927131652832,608.23056435585,,
+"fit","PARK","model name	: INTEL(R) XEON(R) GOLD 6530",4,"four RStan chains on four cores",1.37329721450806,42.510214805603,2063.08292937279,46.3082938194275,2153.27476191521,,

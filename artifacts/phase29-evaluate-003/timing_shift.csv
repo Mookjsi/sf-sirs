@@ -1,0 +1,6 @@
+"model","observed_peak_2015","observed_peak_2017","fitted_peak_2015","fitted_peak_2017","endpoint_error_2015","endpoint_error_2017","observed_change","fitted_change","shift_error","fitted_advance"
+"A_M2",24,11,21,12,-3,1,-13,-9,4,9
+"AS_M2",24,11,20,12,-4,1,-13,-8,5,8
+"SPL_M0",24,11,17,12,-7,1,-13,-5,8,5
+"SPL_M1",24,11,20,11,-4,0,-13,-9,4,9
+"SPL_M2",24,11,21,10,-3,-1,-13,-11,2,11
