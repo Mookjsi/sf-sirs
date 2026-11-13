@@ -1,0 +1,7 @@
+"island","model","max_Rhat","min_n_eff","divergences","treedepth_hits","min_E_BFMI","diagnostics_ok"
+"Hokkaido","Baseline + npieff",1.00175528287912,2016.65839527327,0,0,0.650577562115479,TRUE
+"Hokkaido","Humidity seasonal (no npieff)",1.00443467065614,1564.80038014062,0,0,0.365891465792579,TRUE
+"Shikoku","Baseline + npieff",1.00412123417646,1571.15809594316,0,0,0.505378555045699,TRUE
+"Shikoku","Humidity seasonal (no npieff)",1.00365995961039,647.554888177969,0,0,0.488266255971627,TRUE
+"Ryukyu","Baseline + npieff",1.00325632212344,1790.26521032781,0,0,0.551496169973387,TRUE
+"Ryukyu","Humidity seasonal (no npieff)",1.00574554848054,865.199429719813,0,0,0.393722468710584,TRUE

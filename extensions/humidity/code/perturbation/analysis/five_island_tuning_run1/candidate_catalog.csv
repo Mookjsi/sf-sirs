@@ -1,0 +1,49 @@
+"id","description","family","feature","harmonics","lag","window","sigma_sd","beta_sd","phi_sd","tau_sd","omega_sd","rho_sd","S0_mean","S0_sd","gamma","theta_scale","year_terms","year_sd_prior","process","process_sd_prior"
+"baseline","Weekly seasonal beta without weather","reference","baseline",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_linear","Constant response to humidity anomaly","weather","linear",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_seasonal","Current humidity model: annual sine/cosine response","reference","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_harmonic2","Humidity response with two annual harmonics","weather","linear",2,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_harmonic3","Humidity response with three annual harmonics","weather","linear",3,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_quadratic","Linear and quadratic humidity anomaly","weather","quadratic",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_quadratic_seasonal","Season-dependent linear and quadratic response","weather","quadratic",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_asymmetric","Separate positive/negative anomaly response","weather","asymmetric",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_asymmetric_seasonal","Season-dependent positive/negative response","weather","asymmetric",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_spline3","Natural cubic humidity spline, three basis columns","weather","spline3",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_spline5","Natural cubic humidity spline, five basis columns","weather","spline5",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_spline3_seasonal","Season-dependent natural cubic humidity spline","weather","spline3",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_lag1","Seasonal humidity response with one-week lag","lag","linear",1,1,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_lag2","Seasonal humidity response with two-week lag","lag","linear",1,2,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_lag4","Seasonal humidity response with four-week lag","lag","linear",1,4,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_ma2","Seasonal response to trailing two-week mean","lag","linear",1,0,2,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_ma4","Seasonal response to trailing four-week mean","lag","linear",1,0,4,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_ma8","Seasonal response to trailing eight-week mean","lag","linear",1,0,8,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_distributed_lag","Separate humidity lags: current, weeks1-2, weeks3-4","lag","distributed_lag",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_distributed_lag_seasonal","Season-dependent distributed humidity lags","lag","distributed_lag",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_absolute","Standardized humidity level instead of within-week anomaly","weather","absolute_q",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_absolute_seasonal","Season-dependent standardized humidity level","weather","absolute_q",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"temperature_seasonal","Season-dependent temperature anomaly response","weather","temperature",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_temperature","Humidity and temperature anomalies","weather","q_temp",0,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_temperature_seasonal","Separate seasonal humidity/temperature responses","weather","q_temp",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"humidity_temperature_interaction","Seasonal responses plus humidity-temperature product","weather","q_temp_interaction",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"theta_tight","Humidity coefficient prior scale0.15","prior","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.15,0,0.2,0,0.2
+"theta_wide","Humidity coefficient prior scale0.6","prior","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.6,0,0.2,0,0.2
+"beta_smooth","Weekly beta random-walk prior scale0.5","prior","linear",1,0,1,0.5,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"beta_flexible","Weekly beta random-walk prior scale2","prior","linear",1,0,1,2,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"beta_very_flexible","Weekly beta random-walk prior scale4","prior","linear",1,0,1,4,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"beta_prior_wide","Baseline beta prior SD4","prior","linear",1,0,1,1,4,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"phi_small","Observation-dispersion prior scale3","prior","linear",1,0,1,1,2,3,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"phi_large","Observation-dispersion prior scale30","prior","linear",1,0,1,1,2,30,200,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"tau_short_prior","Immunity-duration prior scale100 weeks","prior","linear",1,0,1,1,2,10,100,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"tau_long_prior","Immunity-duration prior scale400 weeks","prior","linear",1,0,1,1,2,10,400,200,0.02,0.08,0.02,1,0.3,0,0.2,0,0.2
+"rho_wide_prior","Reporting-fraction prior scale0.05","prior","linear",1,0,1,1,2,10,200,200,0.05,0.08,0.02,1,0.3,0,0.2,0,0.2
+"initial_S_wide","Initial susceptible fraction prior SD0.04","prior","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.04,1,0.3,0,0.2,0,0.2
+"gamma_half","Recovery-rate sensitivity: gamma0.5 per week","dynamics","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,0.5,0.3,0,0.2,0,0.2
+"gamma_double","Recovery-rate sensitivity: gamma2 per week","dynamics","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,2,0.3,0,0.2,0,0.2
+"year_level","Additional year-specific transmission level","time","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,1,0.2,0,0.2
+"year_level_wide","Year-specific transmission level, broader prior","time","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,1,0.4,0,0.2
+"year_season","Year-specific level plus annual sine/cosine changes","time","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,3,0.15,0,0.2
+"process_small","AR1 transmission residual, innovation prior scale0.1","time","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,1,0.1
+"process_medium","AR1 transmission residual, innovation prior scale0.25","time","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,1,0.25
+"process_large","AR1 transmission residual, innovation prior scale0.5","time","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,1,0.5
+"year_process","Year levels plus AR1 transmission residual","combined","linear",1,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,1,0.2,1,0.1
+"harmonic2_process","Two humidity harmonics plus AR1 transmission residual","combined","linear",2,0,1,1,2,10,200,200,0.02,0.08,0.02,1,0.3,0,0.2,1,0.15

@@ -1,0 +1,9 @@
+"candidate_id","island","regime","max_Rhat","min_n_eff","divergences","treedepth_hits","min_E_BFMI","diagnostics_ok"
+"existing_seasonal","Hokkaido","holdout",1.00443467065614,1564.80038014062,0,0,0.365891465792579,TRUE
+"existing_seasonal","Honshu","holdout",1.00589588984611,651.431911201305,0,0,0.395047291160881,TRUE
+"existing_seasonal","Shikoku","holdout",1.00365995961039,647.554888177969,0,0,0.488266255971627,TRUE
+"existing_seasonal","Kyushu","holdout",1.00207861959091,705.548361107449,0,0,0.559049290075309,TRUE
+"existing_seasonal","Ryukyu","holdout",1.00574554848054,865.199429719813,0,0,0.393722468710584,TRUE
+"baseline","Hokkaido","reconstruction",1.53018398957096,7.07785937978861,0,0,0.231870327568049,FALSE
+"baseline","Honshu","reconstruction",1.00348247462296,1312.07623479076,0,0,0.451696630819687,TRUE
+"baseline","Shikoku","reconstruction",1.00357390849357,712.589907380731,0,0,0.475176122767391,TRUE

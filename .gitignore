@@ -6,3 +6,8 @@
 /.r-env/
 __pycache__/
 *.pyc
+/sf-sirs-contribution-github.zip
+/.humidity-staging/
+/extensions/humidity/outputs/
+/extensions/humidity/cache/
+/extensions/humidity/tmp/

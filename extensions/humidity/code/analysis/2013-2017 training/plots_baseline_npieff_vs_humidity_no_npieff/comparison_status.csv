@@ -1,0 +1,7 @@
+"island","model_key","model","status","reason"
+"Hokkaido","baseline","Baseline + npieff","ready",""
+"Hokkaido","humidity_seasonal","Humidity seasonal (no npieff)","ready",""
+"Shikoku","baseline","Baseline + npieff","ready",""
+"Shikoku","humidity_seasonal","Humidity seasonal (no npieff)","ready",""
+"Ryukyu","baseline","Baseline + npieff","ready",""
+"Ryukyu","humidity_seasonal","Humidity seasonal (no npieff)","ready",""

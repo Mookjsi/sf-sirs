@@ -1,0 +1,2 @@
+"id","mean_log_score","MAE","coverage_95","mean_interval_width","mean_peak_relative_abs_error","mean_peak_week_abs_error","mean_peak_height_abs_error"
+"humidity_seasonal",-4.93583571953442,25.8397435897436,0.692307692307692,43.3722756410256,0.645914513454234,5,156

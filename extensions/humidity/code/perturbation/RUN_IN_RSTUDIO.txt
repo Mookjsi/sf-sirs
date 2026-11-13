@@ -1,0 +1,31 @@
+Windows 실행 안내
+
+1. perturbation.Rproj를 열어 이 프로젝트의 새 R 세션을 시작합니다.
+2. stanfit_sirs/stanfit_sirs_honshu_npi.R를 엽니다.
+3. 파일 맨 위부터 실행하거나 Source 버튼을 누릅니다.
+   첫 부분에서 프로젝트 패키지와 작업 폴더를 자동 설정합니다.
+   sampling()은 원본 설정 그대로 4개 체인, 체인당 4000회 반복입니다.
+4. 결과는 stanfit_sirs/stanfit_sirs_honshu_npi.rda에 저장됩니다.
+
+실행 순서
+- 기본 SIRS: stanfit_sirs의 각 섬별 *_npi.R
+  hokkaido_npi_raw.R는 별도 비교용 변형입니다.
+- 전후 비교 모형: stanfit_sirs2의 세 *_npi2.R
+- 적합 후 시뮬레이션: simulate_sirs의 해당 파일들
+- 그래프: figure의 해당 파일들 (필요한 적합/시뮬레이션 결과를 먼저 생성)
+- Figure 1과 지도는 MCMC 적합 없이 실행 가능합니다.
+
+기상 데이터
+data_processed의 제공된 CSV를 그대로 사용합니다.
+data_processed/*.R는 배포본에 없는 data_climate 원자료를 요구하므로
+제공 CSV를 이용한 재현 과정에서는 실행하지 않습니다.
+
+환경
+- 프로젝트 전용 .R-library를 사용합니다. 전역 패키지를 덮어쓰지 않습니다.
+- rstan 2.32.7, StanHeaders 2.32.10을 사용합니다.
+- 기존 RStudio에서 다른 버전을 이미 불러왔다면 프로젝트를 새 세션으로 여세요.
+- .setup-backup에는 수정 전 원본, .setup-validation에는 검증 기록이 있습니다.
+- 수정 범위는 실행 환경, 배열 선언 문법, 사용하지 않는 누락 변수,
+  누락된 표기용 함수 및 그래프 폰트/로딩 순서입니다.
+- 모형 식, 사전분포, 입력 CSV, MCMC 반복 횟수는 변경하지 않았습니다.
+- 짧은 실행 검증은 수렴/논문 결과 재현의 검증을 의미하지 않습니다.

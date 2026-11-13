@@ -1,0 +1,9 @@
+{
+  "policy": "Tier B remains in the untouched original workspace. No duplicate multigigabyte archive was created. Keep these roots and their relative paths until a separately verified backup exists.",
+  "roots": {
+    "perturbation": "C:/Users/c/Desktop/perturbation-main (1)/perturbation-main",
+    "analysis": "C:/Users/c/Desktop/analysis"
+  },
+  "manifest": "ARCHIVE_MANIFEST.csv",
+  "restore_rule": "Copy a required row from original root + relative_path to archive_restore_path under extracted handoff; verify its SHA256 first. Do not copy all archives into ordinary Git."
+}

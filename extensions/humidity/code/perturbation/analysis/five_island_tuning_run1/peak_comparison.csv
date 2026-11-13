@@ -1,0 +1,15 @@
+"candidate_id","island","regime","year","observed_peak","predicted_curve_peak","observed_peak_week","predicted_curve_peak_week","peak_height_error","peak_height_abs_error","peak_height_relative_abs_error","peak_week_error","peak_week_abs_error","observed_peak_width_weeks","predicted_peak_width_weeks","peak_width_error_weeks","peak_width_abs_error_weeks","observed_annual_total","predicted_curve_annual_total","annual_total_relative_abs_error","prediction_at_observed_peak","observed_peak_ties","predicted_peak_ties","observed_peak_boundary","predicted_peak_boundary"
+"existing_seasonal","Hokkaido","holdout",2018,298,407,50,45,109,109,0.365771812080537,-5,5,13,13,0,0,6736,6599,0.0203384798099762,180,1,1,FALSE,FALSE
+"existing_seasonal","Hokkaido","holdout",2019,292,302.5,51,50,10.5,10.5,0.035958904109589,-1,1,19,7,-12,12,7124,2760.5,0.612507018528916,301,1,1,FALSE,FALSE
+"existing_seasonal","Honshu","holdout",2018,5615,5455,37,38,-160,160,0.0284951024042743,1,1,11,8,-3,3,85442,72561,0.150757238828679,5305.5,1,1,FALSE,FALSE
+"existing_seasonal","Honshu","holdout",2019,7725,7288,37,36,-437,437,0.0565695792880259,-1,1,7,8,1,1,100715,76306,0.242357146403217,6929,1,1,FALSE,FALSE
+"existing_seasonal","Shikoku","holdout",2018,607,714,37,38,107,107,0.176276771004942,1,1,6,6,0,0,6297,6010,0.045577259012228,675,1,1,FALSE,FALSE
+"existing_seasonal","Shikoku","holdout",2019,691,789,37,38,98,98,0.141823444283647,1,1,7,6,-1,1,6973,6124.5,0.121683636885128,775,1,1,FALSE,FALSE
+"existing_seasonal","Kyushu","holdout",2018,1394,1301,36,37,-93,93,0.0667144906743185,1,1,9,9,0,0,18950,16504,0.129076517150396,1219,1,1,FALSE,FALSE
+"existing_seasonal","Kyushu","holdout",2019,2171,1118,37,39,-1053,1053,0.48502994011976,2,2,5,10,5,5,21614,16250.5,0.248149347645045,1078,1,1,FALSE,FALSE
+"existing_seasonal","Ryukyu","holdout",2018,155,78,24,27,-77,77,0.496774193548387,3,3,13,21,8,8,2493,1638,0.342960288808664,71,1,1,FALSE,FALSE
+"existing_seasonal","Ryukyu","holdout",2019,375,83,28,27,-292,292,0.778666666666667,-1,1,5,19,14,14,2568,1676,0.347352024922118,83,1,2,FALSE,FALSE
+"baseline","Honshu","reconstruction",2018,5615,5067,37,37,-548,548,0.0975957257346394,0,0,11,10,-1,1,85442,80359.5,0.059484796704197,5067,1,1,FALSE,FALSE
+"baseline","Honshu","reconstruction",2019,7725,5062.5,37,37,-2662.5,2662.5,0.344660194174757,0,0,7,10,3,3,100715,80573,0.199990070992404,5062.5,1,1,FALSE,FALSE
+"baseline","Shikoku","reconstruction",2018,607,401,37,37,-206,206,0.339373970345964,0,0,6,9,3,3,6297,5653,0.102270922661585,401,1,1,FALSE,FALSE
+"baseline","Shikoku","reconstruction",2019,691,415,37,37,-276,276,0.399421128798842,0,0,7,9,2,2,6973,5669,0.187007027104546,415,1,1,FALSE,FALSE

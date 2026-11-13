@@ -1,0 +1,11 @@
+"id","year","observed_peak","predicted_curve_peak","observed_peak_week","predicted_curve_peak_week","peak_height_error","peak_height_abs_error","peak_height_relative_abs_error","peak_week_error","peak_week_abs_error","prediction_at_observed_peak","observed_peak_ties","predicted_peak_ties"
+"original_baseline",2018,5615,4998,37,37,-617,617,0.109884238646483,0,0,4998,1,1
+"original_baseline",2019,7725,5356.5,37,37,-2368.5,2368.5,0.306601941747573,0,0,5356.5,1,1
+"original_humidity",2018,5615,3706.5,37,37,-1908.5,1908.5,0.339893143365984,0,0,3706.5,1,1
+"original_humidity",2019,7725,4703.5,37,37,-3021.5,3021.5,0.391132686084142,0,0,4703.5,1,1
+"humidity_quadratic",2018,5615,3141.5,37,51,-2473.5,2473.5,0.440516473731077,14,14,2942,1,1
+"humidity_quadratic",2019,7725,4396,37,40,-3329,3329,0.430938511326861,3,3,4336,1,1
+"humidity_asymmetric",2018,5615,3725,37,51,-1890,1890,0.33659839715049,14,14,2458,1,1
+"humidity_asymmetric",2019,7725,4274,37,40,-3451,3451,0.446731391585761,3,3,3641,1,1
+"humidity_seasonal",2018,5615,5470.5,37,38,-144.5,144.5,0.0257346393588602,1,1,5290,1,1
+"humidity_seasonal",2019,7725,7317,37,36,-408,408,0.0528155339805825,-1,1,6903.5,1,1

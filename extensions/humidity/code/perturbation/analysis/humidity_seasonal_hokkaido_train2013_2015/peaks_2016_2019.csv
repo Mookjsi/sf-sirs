@@ -1,0 +1,5 @@
+"id","year","observed_peak","predicted_curve_peak","observed_peak_week","predicted_curve_peak_week","peak_height_error","peak_height_abs_error","peak_height_relative_abs_error","peak_week_error","peak_week_abs_error","prediction_at_observed_peak","observed_peak_ties","predicted_peak_ties"
+"humidity_seasonal",2016,237,393,48,50,156,156,0.658227848101266,2,2,282,1,1
+"humidity_seasonal",2017,251,350,28,49,99,99,0.394422310756972,21,21,39,1,1
+"humidity_seasonal",2018,298,373,50,50,75,75,0.251677852348993,0,0,373,1,1
+"humidity_seasonal",2019,292,342,51,50,50,50,0.171232876712329,-1,1,336,1,1

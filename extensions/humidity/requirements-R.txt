@@ -1,0 +1,16 @@
+# Recorded collaborator environment; selected direct packages, not a lockfile.
+dplyr==1.2.1
+egg==0.4.5
+ggfortify==0.4.19
+ggplot2==4.0.3
+gridExtra==2.3
+lubridate==1.9.5
+mapdata==2.3.1
+mgcv==1.9-4
+mvtnorm==1.3-7
+Rcpp==1.1.1
+RcppEigen==0.3.4.0.2
+readxl==1.4.5
+rstan==2.32.7
+StanHeaders==2.32.10
+tidyr==1.3.2
