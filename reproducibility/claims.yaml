@@ -93,24 +93,24 @@ claims:
     location: "Table 4.1; Figures 4.1-4.2"
     expected: {M2_MAE: 264.74, Park_median_MAE: 419.72, M2_RMSE: 533.79, Park_mean_RMSE: 744.74}
     source_experiment: phase28-compare-003
-    required_inputs: [Honshu-panel, phase26-m2-fit, Park-posterior-summary]
-    command: "Rscript scripts/phase28.R compare --out artifacts/phase28-new --prepare INPUT/phase28-prepare.rds --verify INPUT/phase28-verify.rds --m2 INPUT/phase28-m2-fit.rds --park INPUT/phase28-park-fit.rds"
-    output: artifacts/phase28-new/fit_metrics.csv
+    required_inputs: [phase26-m2-evaluation, Park-weekly-posterior-summary]
+    command: "Rscript scripts/reproduce_comparison.R --evaluation INPUT/m2-evaluation.rds --park-weekly INPUT/park-weekly-fit.csv --out reproduction/comparison"
+    output: reproduction/comparison/fit_metrics.csv
     verification: "scripts/verify_report.py:T4.1"
     tolerance: 0.005
-    level: 1
-    status: MISSING_INPUT
+    level: 2
+    status: VERIFIED
   - id: T4_2_TIMING
     location: Table 4.2
     expected: {observed_peak_advance: 13, M2_peak_advance: 11, Park_peak_advance: 11, observed_centroid_change: -4.463, M2_centroid_change: -3.268, Park_centroid_change: -1.388}
     source_experiment: phase28-compare-003
-    required_inputs: [Honshu-panel, phase26-m2-fit, Park-posterior-summary]
-    command: "Rscript scripts/phase28.R compare --out artifacts/phase28-new --prepare INPUT/phase28-prepare.rds --verify INPUT/phase28-verify.rds --m2 INPUT/phase28-m2-fit.rds --park INPUT/phase28-park-fit.rds"
-    output: artifacts/phase28-new/movement_metrics.csv
+    required_inputs: [phase26-m2-evaluation, Park-weekly-posterior-summary]
+    command: "Rscript scripts/reproduce_comparison.R --evaluation INPUT/m2-evaluation.rds --park-weekly INPUT/park-weekly-fit.csv --out reproduction/comparison"
+    output: reproduction/comparison/movement_metrics.csv
     verification: "scripts/verify_report.py:T4.2"
     tolerance: {peak: 0, centroid: 0.0005}
-    level: 1
-    status: MISSING_INPUT
+    level: 2
+    status: VERIFIED
   - id: T4_3_RUNTIME_COORDINATES
     location: Table 4.3
     expected: {M2_coordinates: 64, Park_coordinates: 269, M2_seconds: 608.23, Park_seconds: 2153.27}

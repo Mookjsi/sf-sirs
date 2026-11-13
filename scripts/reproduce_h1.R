@@ -29,8 +29,21 @@ frozen_m2_check(model)
 grid <- read.csv(paths[2L], stringsAsFactors=FALSE)
 parents <- read.csv(paths[3L], stringsAsFactors=FALSE)
 result <- frozen_m2_h1(model, grid, parents)
+keys <- c("policy", "season", "parent")
+comparison <- merge(result$parents, parents, by=keys,
+                    suffixes=c(".new", ".source"), sort=TRUE)
+fields <- c("timing_event", "displacement", "exchange", "unresolved",
+            "mixed", "absolute_movement")
+if (nrow(comparison) != 1720L || any(vapply(fields, function(field) {
+  a <- comparison[[paste0(field, ".new")]]
+  b <- comparison[[paste0(field, ".source")]]
+  if (is.numeric(a)) any(abs(a-b) > 0) else any(a != b)
+}, logical(1)))) stop("Independent H1 parent classifications differ from final source")
 write.csv(result$edges, file.path(out, "h1_edges.csv"), row.names=FALSE)
 write.csv(result$parents, file.path(out, "h1_parents.csv"), row.names=FALSE)
+write.csv(data.frame(parent_rows=nrow(comparison),
+                     parent_classifications_match=TRUE),
+          file.path(out, "h1_source_comparison.csv"), row.names=FALSE)
 writeLines(c(paste("evaluation_sha256", model$source_sha256),
              paste("grid_sha256", unname(tools::sha256sum(paths[2L]))),
              paste("parents_sha256", unname(tools::sha256sum(paths[3L]))),

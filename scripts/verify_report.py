@@ -18,6 +18,7 @@ def main():
     parser.add_argument("--h1", type=Path)
     parser.add_argument("--phase29", type=Path)
     parser.add_argument("--phase28", type=Path)
+    parser.add_argument("--phase28-history", type=Path)
     parser.add_argument("--forecast", type=Path)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
@@ -163,8 +164,9 @@ def main():
             str(timing29 or "timing_shift.csv"))
     phase28 = locate(args.phase28, "fit_metrics.csv")
     movement28 = locate(args.phase28, "movement_metrics.csv")
-    runtime28 = locate(args.phase28, "runtime_metrics.csv")
-    inventory28 = locate(args.phase28, "parameter_inventory.csv")
+    runtime28 = locate(args.phase28_history or args.phase28, "runtime_metrics.csv")
+    inventory28 = locate(args.phase28_history or args.phase28,
+                         "parameter_inventory.csv")
     metrics28 = read_csv(phase28) if phase28 else []
     for model, summary, key, expected in (
         ("M2", "M2", "mae", 264.74),
